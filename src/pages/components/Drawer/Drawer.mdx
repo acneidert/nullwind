@@ -1,0 +1,49 @@
+import { theme } from "nullwind";
+import { Meta, Demo, ThemePreview } from "~/components";
+import Preview from "./Preview";
+
+<Meta
+  title="Drawer"
+  description="The Drawer component can be used as to show a drawer overlay that can slide in from left. It opens on top of all existing components. When you drag the component in, it creates a button component linked to the drawer. Clicking the button should open the drawer."
+/>
+
+# Drawer
+
+The Drawer component can be used as to show a drawer overlay that can slide in from left. It opens on top of all existing components. When you drag the component in, it creates a button component linked to the drawer. Clicking the button should open the drawer.
+
+## Usage
+
+<Demo
+  component={Preview}
+  template={(props) => `
+    import { Drawer } from 'nullwind';
+
+    export default function Demo() {
+      return (
+        <>
+          <Button color="primary" onclick={() => instances.myDrawer.show()}>
+            Open Drawer
+          </Button>
+          <Drawer key="myDrawer" class="mt-16">
+            <div class="flex flex-col text-zinc-600 overflow-hidden max-h-full">
+              <span class="text-lg font-semibold py-4">My Awesome Sidebar</span>
+              <ul class="overflow-auto">
+                {Array.from(Array(100).keys()).map((i) => (
+                  <li>Menu Item {i + 1}</li>
+                ))}
+              </ul>
+            </div>
+        </Drawer>
+        </>
+      );
+    }
+    // You can use instances.myDrawer.hide() too
+`}/>
+
+## Theme
+
+<ThemePreview
+  theme={{
+    Drawer: theme.drawer,
+  }}
+/>

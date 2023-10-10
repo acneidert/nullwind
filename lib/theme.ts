@@ -6,6 +6,7 @@ export { baseButtonGroup as buttonGroup } from "./components/ButtonGroup";
 export { baseCheckbox as checkbox } from "./components/forms/Checkbox";
 export { baseCorner as corner } from "./components/forms/Corner";
 export { baseDivider as divider } from "./components/Divider";
+export { baseDrawer as drawer } from "./components/Drawer";
 export { baseError as error } from "./components/forms/Error";
 export { baseHelper as helper } from "./components/forms/Helper";
 export { baseInlineInputWrapper as inlineInputWrapper } from "./components/forms/InlineInputWrapper";

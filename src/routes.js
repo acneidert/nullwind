@@ -5,6 +5,7 @@ import Button from "./pages/components/Button.mdx";
 import ButtonGroup from "./pages/components/ButtonGroup.mdx";
 import CopyButton from "./pages/components/CopyButton.mdx";
 import Divider from "./pages/components/Divider.mdx";
+import Drawer from "./pages/components/Drawer/Drawer.mdx"
 import Modal from "./pages/components/Modal/Modal.mdx";
 import Notifications from "./pages/components/Notifications/Notifications.mdx";
 import Pagination from "./pages/components/Pagination/Pagination.mdx";
@@ -137,6 +138,11 @@ export const routes = [
   {
     title: "Overlays",
     routes: [
+      {
+        title: "Drawer",
+        path: "/components/drawer",
+        component: Drawer,
+      },
       {
         title: "Modal",
         path: "/components/modal",
