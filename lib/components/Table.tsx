@@ -42,46 +42,76 @@ const Table: ITable = ({
   );
 };
 
-Table.THead = ({ children, class: klass, ref, theme }: NullstackClientContext<DefaultProps>) => {
+Table.THead = ({
+  children,
+  class: klass,
+  ref,
+  theme,
+  ...props
+}: NullstackClientContext<DefaultProps>) => {
   const { thead } = tc(baseTable, theme?.table)();
   return (
-    <thead class={thead({ class: klass })} ref={ref}>
+    <thead class={thead({ class: klass })} ref={ref} {...props}>
       {children}
     </thead>
   );
 };
 
-Table.TH = ({ children, class: klass, ref, theme }: NullstackClientContext<DefaultProps>) => {
+Table.TH = ({
+  children,
+  class: klass,
+  ref,
+  theme,
+  ...props
+}: NullstackClientContext<DefaultProps>) => {
   const { th } = tc(baseTable, theme?.table)();
   return (
-    <th scope="col" class={th({ class: klass })} ref={ref}>
+    <th scope="col" class={th({ class: klass })} ref={ref} {...props}>
       {children}
     </th>
   );
 };
 
-Table.TBody = ({ children, class: klass, ref, theme }: NullstackClientContext<DefaultProps>) => {
+Table.TBody = ({
+  children,
+  class: klass,
+  ref,
+  theme,
+  ...props
+}: NullstackClientContext<DefaultProps>) => {
   const { tbody } = tc(baseTable, theme?.table)();
   return (
-    <tbody class={tbody({ class: klass })} ref={ref}>
+    <tbody class={tbody({ class: klass })} ref={ref} {...props}>
       {children}
     </tbody>
   );
 };
 
-Table.TR = ({ children, class: klass, ref, theme }: NullstackClientContext<DefaultProps>) => {
+Table.TR = ({
+  children,
+  class: klass,
+  ref,
+  theme,
+  ...props
+}: NullstackClientContext<DefaultProps>) => {
   const { tr } = tc(baseTable, theme?.table)();
   return (
-    <tr class={tr({ class: klass })} ref={ref}>
+    <tr class={tr({ class: klass })} ref={ref} {...props}>
       {children}
     </tr>
   );
 };
 
-Table.TD = ({ children, class: klass, ref, theme }: NullstackClientContext<DefaultProps>) => {
+Table.TD = ({
+  children,
+  class: klass,
+  ref,
+  theme,
+  ...props
+}: NullstackClientContext<DefaultProps>) => {
   const { td } = tc(baseTable, theme?.table)();
   return (
-    <td class={td({ class: klass })} ref={ref}>
+    <td class={td({ class: klass })} ref={ref} {...props}>
       {children}
     </td>
   );
