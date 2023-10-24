@@ -1,0 +1,39 @@
+import { theme } from "nullwind";
+import Preview from "./Preview";
+
+import { Meta, Playground, Demo, ThemePreview } from "~/components";
+
+<Meta
+  title="DateTimePicker"
+  description="DateTimePicker is a component that allows users to enter text DateTimePicker in a form field."
+/>
+
+# DateTimePicker
+
+DateTimePicker is a component that allows users to enter text DateTimePicker in a form field.
+
+## Usage
+
+<Demo
+  component={Preview}
+  template={(props) => `
+    import { DateTimePicker } from 'nullwind';
+
+    export default function Demo() {
+      return <DateTimePicker ${props} />;
+    }
+
+`}/>
+
+## Theme
+
+<ThemePreview
+  theme={{
+    DateTimePickerWrapper: theme.DateTimePickerWrapper,
+    label: theme.label,
+    corner: theme.corner,
+    DateTimePicker: theme.DateTimePicker,
+    helper: theme.helper,
+    error: theme.error,
+  }}
+/>
