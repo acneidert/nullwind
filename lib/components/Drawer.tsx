@@ -39,7 +39,9 @@ class Drawer extends Nullstack<DrawerProps> {
     this.openDrawer = false;
     setTimeout(() => {
       this.open = false;
-      typeof onclose === "function" && onclose();
+      if (typeof onclose === "function") {
+        onclose();
+      }
     }, duration);
   }
 

@@ -6,7 +6,6 @@ class Preview extends Nullstack {
   visible = false;
 
   render({ instances }) {
-    console.log(instances.myDrawer);
     return (
       <>
         <Button color="primary" onclick={() => instances.myDrawer.show()}>

@@ -30,7 +30,20 @@ interface TabProps extends BaseProps {
   onchange?: (index: number) => void;
 }
 
-const Tabs = ({ children, class: klass, onchange, theme }: NullstackClientContext<TabProps>) => {
+type ITable<TProps = unknown> = NullstackFunctionalComponent<TProps> & {
+  Tab?: (context: BaseProps) => NullstackNode;
+};
+
+interface DefaultProps extends BaseProps {
+  children?: NullstackNode;
+}
+
+const Tabs: ITable = ({
+  children,
+  class: klass,
+  onchange,
+  theme,
+}: NullstackClientContext<TabProps>) => {
   const { list, panel, tab } = tc(baseTabs, theme?.tabs)();
 
   return (
@@ -56,6 +69,6 @@ const Tabs = ({ children, class: klass, onchange, theme }: NullstackClientContex
   );
 };
 
-Tabs.Tab = ({ children }) => <div>{children}</div>;
+Tabs.Tab = ({ children }: DefaultProps) => <div>{children}</div>;
 
-export default Tabs as NullstackFunctionalComponent<TabProps>;
+export { Tabs as default };

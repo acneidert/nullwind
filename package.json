@@ -51,6 +51,7 @@
     "@docsearch/js": "^3.3.2",
     "@floating-ui/dom": "^1.4.2",
     "@mdx-js/loader": "^2.3.0",
+    "dayjs": "^1.11.10",
     "highlight.js": "^11.8.0",
     "nullstack-heroicons": "^0.1.0",
     "string-replace-loader": "^3.1.0",

@@ -5,7 +5,7 @@ import Button from "./pages/components/Button.mdx";
 import ButtonGroup from "./pages/components/ButtonGroup.mdx";
 import CopyButton from "./pages/components/CopyButton.mdx";
 import Divider from "./pages/components/Divider.mdx";
-import Drawer from "./pages/components/Drawer/Drawer.mdx"
+import Drawer from "./pages/components/Drawer/Drawer.mdx";
 import Modal from "./pages/components/Modal/Modal.mdx";
 import Notifications from "./pages/components/Notifications/Notifications.mdx";
 import Pagination from "./pages/components/Pagination/Pagination.mdx";
@@ -15,7 +15,9 @@ import Tabs from "./pages/components/Tabs/Tabs.mdx";
 import Title from "./pages/components/Title.mdx";
 import Tooltip from "./pages/components/Tooltip.mdx";
 import Checkbox from "./pages/forms/Checkbox.mdx";
+import DateTimePicker from "./pages/forms/DateTimePicker/DateTimePicker.mdx";
 import Input from "./pages/forms/Input.mdx";
+import MultiSelect from "./pages/forms/MultiSelect/MultiSelect.mdx";
 import Radio from "./pages/forms/Radio.mdx";
 import Rating from "./pages/forms/Rating.mdx";
 import Select from "./pages/forms/Select.mdx";
@@ -67,6 +69,16 @@ export const routes = [
         title: "Checkbox",
         path: "/components/checkbox",
         component: Checkbox,
+      },
+      {
+        title: "DateTimePicker",
+        path: "/components/date-time-picker",
+        component: DateTimePicker,
+      },
+      {
+        title: "Multi Select",
+        path: "/components/multi-select",
+        component: MultiSelect,
       },
       {
         title: "Radio",
