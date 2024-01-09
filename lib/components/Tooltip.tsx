@@ -42,6 +42,7 @@ export default class Tooltip extends Nullstack {
   arrowRef: HTMLElement = null;
 
   updatePosition(context?: NullstackClientContext<TooltipProps>) {
+    if (this.tooltipRef.style.display === "none") return;
     computePosition(this.targetRef, this.tooltipRef, {
       placement: context.placement || "top",
       middleware: [offset(context.offset || 8), flip(), shift(), arrow({ element: this.arrowRef })],
