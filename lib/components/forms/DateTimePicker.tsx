@@ -270,6 +270,7 @@ class DateTimePicker extends Nullstack<DateTimePickerProps> {
   }
 
   updatePosition(context) {
+    if (!this.hydrated) return;
     computePosition(this._targetRef, this._dropdownRef, {
       placement: context.placement || "top",
       middleware: [
