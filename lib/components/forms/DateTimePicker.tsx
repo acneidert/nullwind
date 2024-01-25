@@ -92,6 +92,8 @@ class DateTimePicker extends Nullstack<DateTimePickerProps> {
     const customParseFormat = require("dayjs/plugin/customParseFormat");
     dayjs.extend(customParseFormat);
     this.updatePosition({});
+    require("dayjs/locale/pt-br");
+    dayjs.locale("pt-br");
     globalThis.window.addEventListener("click", this._handleClick);
   }
 
