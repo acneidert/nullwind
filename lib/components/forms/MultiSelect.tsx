@@ -252,7 +252,7 @@ class MultiSelect extends Nullstack<MultiSelectProps> {
               oninput={this.handleChange}
               onfocus={this.toggleDropdown}
               disabled={disabled}
-              class={`shadow-none grow shrink ring-0 border-0 focus:shadow-none p-1 focus:ring-0 focus:border-0 focus:outline-none ${
+              class={`shadow-none min-w-12 shrink ring-0 border-0 focus:shadow-none p-1 focus:ring-0 focus:border-0 focus:outline-none ${
                 disabled ? "cursor-not-allowed" : ""
               }`}
               required={required}
