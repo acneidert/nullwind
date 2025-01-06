@@ -57,7 +57,7 @@ class MultiSelect extends Nullstack<MultiSelectProps> {
   }
 
   _handleClick(e) {
-    e.preventDefault();
+    // e.preventDefault();
     if (
       !this._optionsEl.contains(e.target) &&
       !this._targetRef.contains(e.target) &&

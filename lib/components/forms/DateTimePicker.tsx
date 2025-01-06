@@ -315,7 +315,7 @@ class DateTimePicker extends Nullstack<DateTimePickerProps> {
   }
 
   _handleClick(e) {
-    e.preventDefault();
+    // e.preventDefault();
     if (!this._dropdownRef) return;
     if (!this._dropdownRef.contains(e.target) && this._dropdownRef.classList.contains("block")) {
       this.updatePosition({});
