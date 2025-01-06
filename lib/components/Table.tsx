@@ -11,6 +11,7 @@ export const baseTable = {
     tbody: "divide-y divide-slate-100 border-t border-slate-100",
     tr: "",
     td: "px-6 py-4",
+    tfoot: "bg-slate-50",
   },
 };
 
@@ -21,6 +22,7 @@ interface DefaultProps extends BaseProps {
 type ITable<TProps = unknown> = NullstackFunctionalComponent<TProps> & {
   TBody?: (context: BaseProps) => NullstackNode;
   TD?: (context: BaseProps) => NullstackNode;
+  TFoot?: (context: BaseProps) => NullstackNode;
   TH?: (context: BaseProps) => NullstackNode;
   THead?: (context: BaseProps) => NullstackNode;
   TR?: (context: BaseProps) => NullstackNode;
@@ -114,6 +116,21 @@ Table.TD = ({
     <td class={td({ class: klass })} ref={ref} {...props}>
       {children}
     </td>
+  );
+};
+
+Table.TFoot = ({
+  children,
+  class: klass,
+  ref,
+  theme,
+  ...props
+}: NullstackClientContext<DefaultProps>) => {
+  const { tfoot } = tc(baseTable, theme?.table)();
+  return (
+    <tfoot class={tfoot({ class: klass })} ref={ref} {...props}>
+      {children}
+    </tfoot>
   );
 };
 
