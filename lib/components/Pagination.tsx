@@ -4,7 +4,7 @@ import tc from "../tc";
 import type { BaseProps } from "../types";
 
 export const basePagination = {
-  base: "isolate inline-flex -space-x-px rounded-md shadow-sm",
+  base: "isolate inline-flex -space-x-px rounded-md shadow-sm pt-2",
   slots: {
     control: {
       base: "relative flex gap-1 items-center px-4 py-2 ring-1 ring-inset ring-gray-300 text-sm font-semibold text-gray-900 inline-flex hover:bg-gray-50 focus:z-20 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500",
@@ -16,7 +16,7 @@ export const basePagination = {
           true: "rounded-r-md",
         },
         active: {
-          true: "z-10 bg-secondary-500 text-white hover:bg-secondary-700",
+          true: "z-10 bg-primary-500 text-white hover:bg-primary-700",
         },
       },
     },
